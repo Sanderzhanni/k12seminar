@@ -1,1 +1,26 @@
 # k12seminar
+
+* Liidest kasutame, sest klass saab muidu ainult ühte teist klassi kasutada. Seega on liidest hea kasutada, sest saab igal pool kasutada (implements). Töö kavandamise käigus kirjutatakse liidesesse kõik mis vaja on, vajadusel saab ka täiendada, aga kindlasti peab kasutama kõiki liideses deklareeritud fukntsioone kui rakendad teise klassi.
+* Liidest on hea kasutada kui näiteks projekt on mahuline ning rühmaga teete selle kallal tööd, siis hoiate ühtset struktuuri.
+* Üks interface saab samuti extendida teist interface’i.
+4* ühes klassis saab samuti kasutada rohkem kui üht interface’i.
+*  
+  interface InterFaceOne {
+	void function1();
+	char tere1();
+	}
+  interface InterFaceTwo{
+  	void function2();
+	char tere2();
+}
+
+public class Liides1 implements InterFaceOne{
+	void function1();
+	char tere1();
+}
+public class MultipleInterfaces implements InterFaceOne, InterFaceTwo{
+	void function2();
+	char tere2();
+	void function1();
+	char tere1();
+	}
